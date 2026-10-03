@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-violet: #7F5AF0;
+  --color-brand-violet-soft: #A78BFA;
+  --color-brand-violet-dark: #6C47D9;
+  --color-brand-violet-bg: #EDE9FE;
+  --color-brand-pink: #EC4899;
+  --color-brand-pink-soft: #FBCFE8;
+  --color-brand-bg-light: #F3F4F6;
+  --color-brand-text-dark: #1F2937;
+  --color-brand-text-gray: #6B7280;
+  --color-brand-text-light: #9CA3AF;
+  --color-brand-white: #FFFFFF;
+  --color-brand-border: #E5E7EB;
+  --font-sans: "Poppins", "Inter", sans-serif;
+  --font-script: "Great Vibes", cursive;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #FFFFFF;
+    min-height: 100vh;
+    font-family: "Poppins", "Inter", sans-serif;
+    color: #1F2937;
+  }
+}
+
+@layer utilities {
+  .bg-violet-pink-gradient {
+    background: linear-gradient(135deg, var(--color-brand-violet) 0%, var(--color-brand-pink) 100%);
+  }
+  .text-violet-pink-gradient {
+    background: linear-gradient(135deg, var(--color-brand-violet) 0%, var(--color-brand-pink) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* Custom scrollbar for the violet theme */
+@layer base {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #F3F4F6;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #A78BFA;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7F5AF0;
+  }
+}
+
+/* Smooth card animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes cloudDrift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes gentleSway {
+  0%, 100% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(2deg) scale(1.02);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-cloud-drift {
+  animation: cloudDrift 6s ease-in-out infinite alternate;
+}
+
+.animate-gentle-sway {
+  animation: gentleSway 8s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
