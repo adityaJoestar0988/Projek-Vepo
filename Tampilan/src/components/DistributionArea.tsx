@@ -28,7 +28,7 @@ const DistributionArea = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <span className="text-brand-violet font-semibold text-sm tracking-widest uppercase mb-3 block">Jangkauan Distribusi</span>
+            <span className="text-brand-violet font-semibold text-sm tracking-widest uppercase mb-3 block">Jangkauan Distribusi Kami</span>
             <h3 className="text-3xl md:text-4xl font-bold mb-6 text-brand-text-dark tracking-tight">
               Membawa Kesegaran ke Berbagai Wilayah
             </h3>

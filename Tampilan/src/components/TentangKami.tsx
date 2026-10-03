@@ -65,7 +65,7 @@ const StorySection = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <span className="text-brand-violet font-semibold text-sm tracking-widest uppercase mb-3 block">Tentang Perusahaan</span>
+          <span className="text-brand-violet font-semibold text-sm tracking-widest uppercase mb-3 block">Tentang Perusahaan Kami</span>
           <h2 className="text-4xl md:text-5xl font-bold text-brand-text-dark tracking-tight">
             Tentang Kami
           </h2>
